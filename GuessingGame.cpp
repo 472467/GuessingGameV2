@@ -1,3 +1,9 @@
+/* Written by Brendan
+	A lame guessing game 
+	If you guess the incorrect number it tells you if its too high or low and repeat until the game is won.
+2016
+*/
+
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
@@ -17,19 +23,20 @@ int main()
 
   while (guessNum != secretNum){//loops til number is found
 
-    cin >> input;//gets input
+    cin >> guessNum;//gets input
     if(guessNum != secretNum){//incorrect guess
 
-      cout << "Incorrect guess!";
+      cout << "Incorrect guess! ";
       if(guessNum > secretNum){//guess bigger
 
-	  cout << "The guess was larger than the secret number";
+	  cout << "Your guess was larger than the secret number";
 	}else{//guess smaller
 
-	  cout << "The guess was smaller than the secret number";
+	  cout << "Your guess was smaller than the secret number";
 	}
     }
-    if(guessNum
   }
+  cout << "Congrats you win! The number was ";
+  cout << secretNum;
   return 0;
 }
